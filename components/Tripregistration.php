@@ -4,6 +4,7 @@ use Cms\Classes\ComponentBase;
 use NielsVanDenDries\TripRegistration\Models\Trip;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Http\Request;
+use Flash;
 use Redirect;
 
 class Tripregistration extends ComponentBase
@@ -35,6 +36,8 @@ class Tripregistration extends ComponentBase
         $trip->mileage = $request->input('mileage');
         $trip->save();
 
+        Flash::success('Registration added successfully.');
+
         return redirect()->refresh();
     }
 
@@ -46,6 +49,8 @@ class Tripregistration extends ComponentBase
         if ($trip) {
             $trip->delete();
         }
+
+        Flash::warning('Registration deleted successfully.');
 
         return redirect()->refresh();
     }

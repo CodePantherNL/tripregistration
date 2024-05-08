@@ -16,6 +16,14 @@
 
 <h1>Trip Registration</h1>
 
+<section id="alert-objectform">
+    {% flash %}
+    <div class="alert alert-{{ type }}">
+        {{ message }}
+    </div>
+    {% endflash %}
+</section>
+
 <div class="formhead">
 <form data-request="onSave" data-request-update="'trips': '#trip-list'" class="my-4">
     <div class="row">
