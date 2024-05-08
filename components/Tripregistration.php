@@ -35,7 +35,7 @@ class Tripregistration extends ComponentBase
         $trip->mileage = $request->input('mileage');
         $trip->save();
 
-        return Redirect::back();
+        return redirect()->refresh();
     }
 
     public function onDelete()
@@ -47,6 +47,6 @@ class Tripregistration extends ComponentBase
             $trip->delete();
         }
 
-        return Redirect::back();
+        return redirect()->refresh();
     }
 }
