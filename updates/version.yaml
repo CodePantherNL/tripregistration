@@ -1,0 +1,8 @@
+v1.0.1:
+    - 'Initialize plugin'
+v1.0.2:
+    - 'Created table nielsvandendries_tripregistration_trip'
+    - builder_table_create_nielsvandendries_tripregistration_trip.php
+v1.0.3:
+    - 'Updated table nielsvandendries_tripregistration_trip'
+    - builder_table_update_nielsvandendries_tripregistration_trip.php

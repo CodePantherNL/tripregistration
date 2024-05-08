@@ -1,0 +1,26 @@
+fields:
+    from:
+        label: From
+        span: auto
+        disabled: 0
+        readOnly: 0
+        type: text
+    to:
+        label: To
+        span: auto
+        disabled: 0
+        readOnly: 0
+        type: text
+    mileage:
+        label: Mileage
+        span: auto
+        disabled: 0
+        readOnly: 0
+        type: number
+    date:
+        label: 'Date Picker'
+        mode: datetime
+        span: auto
+        disabled: 0
+        readOnly: 0
+        type: datepicker

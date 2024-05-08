@@ -1,0 +1,21 @@
+columns:
+    date:
+        label: date
+        type: datetime
+        searchable: true
+        sortable: true
+    from:
+        label: from
+        type: text
+        searchable: true
+        sortable: true
+    to:
+        label: to
+        type: text
+        searchable: true
+        sortable: true
+    mileage:
+        label: mileage
+        type: number
+        searchable: true
+        sortable: true

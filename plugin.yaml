@@ -1,0 +1,21 @@
+plugin:
+    name: 'nielsvandendries.tripregistration::lang.plugin.name'
+    description: 'nielsvandendries.tripregistration::lang.plugin.description'
+    author: 'Niels van den Dries'
+    icon: oc-icon-calculator
+    homepage: 'Https://nvandendries.dev'
+permissions:
+    user:
+        tab: 'nielsvandendries.tripregistration::lang.plugin.name'
+        label: User
+    manager:
+        tab: 'nielsvandendries.tripregistration::lang.plugin.name'
+        label: Manager
+navigation:
+    main-menu-item-tripreg:
+        label: 'Trip Registration'
+        url: nielsvandendries/tripregistration/tripregistration
+        icon: icon-car
+        permissions:
+            - user
+            - manager

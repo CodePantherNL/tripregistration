@@ -1,0 +1,11 @@
+name: TripRegistration
+modelClass: NielsVanDenDries\TripRegistration\Models\Trip
+form: $/nielsvandendries/tripregistration/models/trip/fields.yaml
+defaultRedirect: nielsvandendries/tripregistration/tripregistration
+create:
+    redirect: 'nielsvandendries/tripregistration/tripregistration/update/:id'
+    redirectClose: nielsvandendries/tripregistration/tripregistration
+update:
+    redirect: nielsvandendries/tripregistration/tripregistration
+    redirectClose: nielsvandendries/tripregistration/tripregistration
+preview: {  }
