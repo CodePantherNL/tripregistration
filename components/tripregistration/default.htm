@@ -19,9 +19,10 @@
 <!-- Code to show the Flash message -->
 <section id="alert-objectform">
     {% flash %}
-    <div class="alert alert-{{ type }}">
-        {{ message }}
-    </div>
+        <div class="alert alert-{{ type }} alert-dismissible fade show" role="alert">
+          <strong>Holy guacamole!</strong> {{ message }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
     {% endflash %}
 </section>
 
