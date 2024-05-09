@@ -7,8 +7,10 @@
     color: white;
 }
 .formhead {
-    padding: 2px;
-    background-color: #212121;
+    border: solid 1px #393939;
+    background-color: #121212;
+    padding-left: 1rem;
+    padding-right: 1rem;
     color: white;
     border-radius: 5px;
 }
@@ -27,30 +29,46 @@
 </section>
 
 <!-- Form to add Registrations -->
-<div class="formhead">
-<form data-request="onSave" data-request-update="'trips': '#trip-list'" class="my-4">
-    <div class="row">
-        <div class="col-md-3 mb-3">
-            <label for="date">Date:</label>
-            <input type="text" id="date" name="date" class="form-control" value="{{ now|date('Y-m-d H:i:s') }}" readonly>
+<p class="d-inline-flex d-grid gap-2">
+  <button class="btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    <i class="fa-solid fa-gauge"></i> Click to add Registration.
+  </button>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+    <div class="formhead">
+        <form data-request="onSave" data-request-update="'trips': '#trip-list'" class="my-4">
+            <div class="row">
+                <div class="col-md-3">
+                    <label for="date">Date:</label>
+                    <input type="text" id="date" name="date" class="form-control" value="{{ now|date('Y-m-d H:i:s') }}" readonly>
+                </div>
+                <div class="col-md-3">
+                    <label for="from">From:</label>
+                    <input type="text" id="from" name="from" class="form-control" placeholder="From" required>
+                </div>
+                <div class="col-md-3">
+                    <label for="to">To:</label>
+                    <input type="text" id="to" name="to" class="form-control" placeholder="To" required>
+                </div>
+                <div class="col-md-3">
+                    <label for="mileage">Mileage:</label>
+                    <input type="number" id="mileage" name="mileage" class="form-control" placeholder="Mileage" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 mt-3 d-grid gap-2">
+                    <button type="submit" class="btn btn-info btn-lg">Add Registration</button>
+                </div>
+                <div class="col-md-9 mt-3">
+                    <div class="alert alert-info" role="alert">
+                        Registrations can be deleted after adding one just press the delete button.
+                    </div>
+                </div>
+            </div>
+        </form>
         </div>
-        <div class="col-md-3 mb-3">
-            <label for="from">From:</label>
-            <input type="text" id="from" name="from" class="form-control" placeholder="From" required>
-        </div>
-        <div class="col-md-3 mb-3">
-            <label for="to">To:</label>
-            <input type="text" id="to" name="to" class="form-control" placeholder="To" required>
-        </div>
-        <div class="col-md-2 mb-3">
-            <label for="mileage">Mileage:</label>
-            <input type="number" id="mileage" name="mileage" class="form-control" placeholder="Mileage" required>
-        </div>
-        <div class="col-md-1 mb-3">
-            <button type="submit" class="btn btn-primary">Add</button>
-        </div>
-    </div>
-</form>
+  </div>
 </div>
 
 <!-- Table to show saved registrations -->
